@@ -1,0 +1,13 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+	config.vm.box = "ubuntu/impish64"
+
+	config.ssh.insert_key = false
+
+	config.vm.define "practiceVM" do |webSite|
+		webSite.vm.hostname = "sandbox"
+		webSite.vm.network :private_network, ip: "192.168.56.4"
+	end
+end

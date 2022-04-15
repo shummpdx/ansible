@@ -1,0 +1,26 @@
+---
+- name: Hello World
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Update System
+      apt:
+        update_cache: yes
+        upgrade: yes
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: latest
+    
+    - name: add user to group
+      user:
+        name: vagrant
+        group: docker
+    
+    - name: Install portainer
+      command: sudo docker pull portainer/portainer-ce:latest
+    
+    - name: Run portainer
+      command: sudo docker run -d -p 9000:9000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest

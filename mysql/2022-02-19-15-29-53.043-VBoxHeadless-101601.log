@@ -1,0 +1,12 @@
+Log created: 2022-02-19T15:29:53.431489000Z
+Process ID:  101601 (0x18ce1)
+Parent PID:  1 (0x1)
+Executable:  /usr/lib/virtualbox/VBoxHeadless
+Arg[0]: /usr/lib/virtualbox/VBoxHeadless
+Arg[1]: --comment
+Arg[2]: practiceVMs_practiceVM_1645227634943_84551
+Arg[3]: --startvm
+Arg[4]: 7f5dc3fb-f159-4770-9c30-fd8d1d680a63
+Arg[5]: --vrde
+Arg[6]: config
+AddRef: illegal refcnt=3221225469 state=2
